@@ -232,7 +232,7 @@ export function RiscoExposicaoChart({ data }: RiscoExposicaoProps) {
           <YAxis yAxisId="left" label={{ value: 'Score', angle: -90, position: 'insideLeft' }} stroke="#6b7280" />
           <YAxis yAxisId="right" orientation="right" tickFormatter={(value) => formatCurrency(value)} stroke="#6b7280" />
           <Tooltip
-            formatter={(value: any, name: string) => {
+            formatter={(value: any, name?: string) => {
               if (name === 'Exposição (R$)') return formatCurrency(value);
               return value;
             }}

@@ -168,19 +168,55 @@ Cada arquivo JSON na pasta `/data` representa um processo e segue este formato:
 
 ## 🚢 Deploy na Vercel
 
-Este projeto está otimizado para deploy na Vercel:
+Este projeto está totalmente preparado e otimizado para deploy na Vercel.
 
-1. **Faça o build de produção:**
+### Opção 1: Deploy via Vercel CLI
+
+1. **Instale a CLI da Vercel (se ainda não tiver):**
    ```bash
-   npm run build
+   npm i -g vercel
    ```
 
-2. **Deploy na Vercel:**
+2. **Faça login na Vercel:**
    ```bash
-   npx vercel
+   vercel login
    ```
 
-   Ou conecte o repositório diretamente na interface da Vercel para deploy automático.
+3. **Execute o deploy:**
+   ```bash
+   vercel
+   ```
+   
+   Para deploy em produção:
+   ```bash
+   vercel --prod
+   ```
+
+### Opção 2: Deploy via Interface Web
+
+1. Acesse [vercel.com](https://vercel.com)
+2. Clique em "Add New Project"
+3. Importe este repositório do GitHub
+4. A Vercel detectará automaticamente as configurações Next.js
+5. Clique em "Deploy"
+
+### Configuração Incluída
+
+O arquivo `vercel.json` já está configurado com:
+- Comando de build otimizado
+- Framework Next.js detectado automaticamente
+- Configuração de output adequada
+
+### Após o Deploy
+
+A aplicação será disponibilizada em uma URL como:
+- `https://seu-projeto.vercel.app`
+
+Todos os recursos estarão funcionais:
+- ✅ Dashboard principal com KPIs e gráficos
+- ✅ Páginas de detalhes de processos
+- ✅ Geração estática (SSG) para máxima performance
+- ✅ Otimizações automáticas da Vercel
 
 ## 📦 Scripts Disponíveis
 
